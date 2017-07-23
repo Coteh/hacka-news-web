@@ -1,0 +1,13 @@
+.title-bar {
+    background-color: #f60;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.title-bar h1 {
+    padding-left: 8px;
+}
+
+.stories {
+    margin: 0em 1em;
+}

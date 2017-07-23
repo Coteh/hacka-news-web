@@ -1,0 +1,33 @@
+/*******************************
+        User Overrides
+*******************************/
+.ui.nag.black {
+    background-color: @black;
+}
+.ui.nag.blue {
+    background-color: @blue;
+}
+.ui.nag.green {
+    background-color: @green;
+}
+.ui.nag.grey {
+    background-color: @grey;
+}
+.ui.nag.orange {
+    background-color: @orange;
+}
+.ui.nag.pink {
+    background-color: @pink;
+}
+.ui.nag.purple {
+    background-color: @purple;
+}
+.ui.nag.red {
+    background-color: @red;
+}
+.ui.nag.teal {
+    background-color: @teal;
+}
+.ui.nag.yellow {
+    background-color: @yellow;
+}

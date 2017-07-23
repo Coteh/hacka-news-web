@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <%- include("header") %>
+    <body>
+        <%- include("menu", {active: active}) %>
+        <div class="stories">
+            <div><h3><%= title %></h3></div>
+            <hr>
+            <%- include("list") %>
+        </div>
+    </body>
+</html>
