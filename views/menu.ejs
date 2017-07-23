@@ -1,4 +1,24 @@
-<div class="title-bar">
+<div class="ui segment orange nobottomgap">
+    <div class="ui top right floated pointing dropdown icon button">
+      <i class="options icon"></i>
+      <div class="menu">
+        <div class="header">
+          Settings
+        </div>
+        <div class="header">
+          <i class="paint brush icon"></i>
+          Theme
+        </div>
+        <div class="item" id="regular">
+          <div class="ui orange empty label"></div>
+          Regular
+        </div>
+        <div class="item" id="night">
+          <div class="ui black empty label"></div>
+          Night Mode
+        </div>
+      </div>
+    </div>
     <h1>hacka-news</h1>
 </div>
 <div class="five ui pointing menu item">
@@ -8,3 +28,18 @@
     <a href="show" class="item <% if (active == "show") { %> <%- "active"; %> <% } %>">Show</a>
     <a href="jobs" class="item <% if (active == "jobs") { %> <%- "active"; %> <% } %>">Jobs</a>
 </div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.ui.dropdown').dropdown();
+    $('.ui.dropdown .menu .item#regular').on('click', function() {
+        $('.ui.segment.darkorange').addClass("orange").removeClass("darkorange inverted");
+        $('.ui.menu').removeClass("inverted");
+        $(document.body).css("background-color", "white").css("color", "black");
+    });
+    $('.ui.dropdown .menu .item#night').on('click', function() {
+        $('.ui.segment.orange').addClass("darkorange inverted").removeClass("orange");
+        $('.ui.menu').addClass("inverted");
+        $(document.body).css("background-color", "black").css("color", "white");
+    });
+});
+</script>
