@@ -68,7 +68,7 @@ semantic/dist/
 semantic/tasks/
 
 # Build Directory
-# public/
+public/
 
 # Library Directory
 lib/
