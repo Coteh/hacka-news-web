@@ -22,7 +22,7 @@ $(document).ready(function() {
     $('.ui.dropdown .menu .item#night').on('click', function() {
         changeTheme("night");
     });
-    var transitionTime = 500;
+    var transitionTime = 0;
     $(document.body).fadeIn(transitionTime);
     changeTheme($.cookie("theme"));
 });
