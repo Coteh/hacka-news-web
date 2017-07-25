@@ -38,3 +38,4 @@ or
 - Add comments view
 - Add poll options view
 - Add option to change number of posts to view
+- Add mobile-friendly view
