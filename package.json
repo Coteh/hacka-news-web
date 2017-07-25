@@ -4,7 +4,7 @@
   "description": "hacka-news for the web",
   "main": "app.js",
   "scripts": {
-    "postinstall": "npm run dl-vendors && npm run build",
+    "postinstall": "cd semantic && gulp build && cd .. && npm run dl-vendors && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "build": "webpack",
@@ -17,7 +17,9 @@
     "ejs-lint": "^0.3.0",
     "express": "^4.15.3",
     "hacka-news": "^1.2.0",
-    "semantic-ui": "^2.2.11",
+    "semantic-ui": "^2.2.11"
+  },
+  "devDependencies": {
     "copy-webpack-plugin": "^4.0.1",
     "webpack": "^3.3.0"
   },
