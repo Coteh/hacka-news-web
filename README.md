@@ -1,5 +1,7 @@
 # hacka-news-web
 
+![Screenshot](screenshot.png "App Screenshot")
+
 A web interface for Hacker News that makes use of my [hacka-news](https://github.com/Coteh/hacka-news) node module.
 
 ## Features
