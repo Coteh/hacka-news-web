@@ -4,7 +4,7 @@
   "description": "hacka-news for the web",
   "main": "app.js",
   "scripts": {
-    "postinstall": "webpack",
+    "postinstall": "npm run dl-vendors && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "build": "webpack",
