@@ -4,7 +4,7 @@
   "description": "hacka-news for the web",
   "main": "app.js",
   "scripts": {
-    "postinstall": "node -e \"process.env.NODE_ENV != 'production' && process.exit(1)\" || webpack",
+    "postinstall": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "build": "webpack",
@@ -17,9 +17,7 @@
     "ejs-lint": "^0.3.0",
     "express": "^4.15.3",
     "hacka-news": "^1.2.0",
-    "semantic-ui": "^2.2.11"
-  },
-  "devDependencies": {
+    "semantic-ui": "^2.2.11",
     "copy-webpack-plugin": "^4.0.1",
     "webpack": "^3.3.0"
   },
