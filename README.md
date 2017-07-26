@@ -2,7 +2,7 @@
 
 ![Screenshot](screenshot.png "App Screenshot")
 
-A web interface for Hacker News that makes use of my [hacka-news](https://github.com/Coteh/hacka-news) node module.
+A web interface for Hacker News that makes use of my [hacka-news](https://github.com/Coteh/hacka-news) node module. Features [Embedded JavaScript templates (ejs)](http://ejs.co/) and [Semantic UI](https://semantic-ui.com/).
 
 ## Features
 
@@ -41,3 +41,4 @@ or
 - Add poll options view
 - Add option to change number of posts to view
 - Add mobile-friendly view
+- Dynamically load news content
