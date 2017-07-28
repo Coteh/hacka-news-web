@@ -1,6 +1,6 @@
 {
   "name": "hacka-news-web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "hacka-news for the web",
   "main": "app.js",
   "scripts": {
@@ -24,6 +24,6 @@
     "webpack": "^3.3.0"
   },
   "engines": {
-      "node": "7.7.2"
+    "node": "7.7.2"
   }
 }
