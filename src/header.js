@@ -11,7 +11,9 @@ function changeTheme(theme) {
             $(document.body).css("background-color", "black").css("color", "white");
             break;
     }
-    $.cookie("theme", theme, {expires: 3650});
+    if ($.cookie("theme") === undefined) {
+        $.cookie("theme", theme, {expires: 3650});
+    }
 }
 
 $(document).ready(function() {
