@@ -1,3 +1,82 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.orange {
+    background-color: #F2711C !important;
+    color: black;
+}
+
+/*--- Standard Colors  ---*/
+
+.ui.menu .red.active.item,
+.ui.red.menu .active.item {
+  border-color: #DB2828 !important;
+  color: #FFFFFF !important;
+}
+
+.ui.menu .orange.active.item,
+.ui.orange.menu .active.item {
+  border-color: #F2711C !important;
+  color: #FFFFFF !important;
+}
+
+.ui.menu .yellow.active.item,
+.ui.yellow.menu .active.item {
+  border-color: #FBBD08 !important;
+  color: #FFFFFF !important;
+}
+
+.ui.menu .olive.active.item,
+.ui.olive.menu .active.item {
+  border-color: #B5CC18 !important;
+  color: #FFFFFF !important;
+}
+
+.ui.menu .green.active.item,
+.ui.green.menu .active.item {
+  border-color: #21BA45 !important;
+  color: #FFFFFF !important;
+}
+
+.ui.menu .teal.active.item,
+.ui.teal.menu .active.item {
+  border-color: #00B5AD !important;
+  color: #FFFFFF !important;
+}
+
+.ui.menu .blue.active.item,
+.ui.blue.menu .active.item {
+  border-color: #2185D0 !important;
+  color: #FFFFFF !important;
+}
+
+.ui.menu .violet.active.item,
+.ui.violet.menu .active.item {
+  border-color: #6435C9 !important;
+  color: #FFFFFF !important;
+}
+
+.ui.menu .purple.active.item,
+.ui.purple.menu .active.item {
+  border-color: #A333C8 !important;
+  color: #FFFFFF !important;
+}
+
+.ui.menu .pink.active.item,
+.ui.pink.menu .active.item {
+  border-color: #E03997 !important;
+  color: #FFFFFF !important;
+}
+
+.ui.menu .brown.active.item,
+.ui.brown.menu .active.item {
+  border-color: #A5673F !important;
+  color: #FFFFFF !important;
+}
+
+.ui.menu .grey.active.item,
+.ui.grey.menu .active.item {
+  border-color: #767676 !important;
+  color: #FFFFFF !important;
+}

@@ -1,0 +1,18 @@
+<div class="desktop-menu">
+    <div class="ui segment orange nobottomgap">
+        <div class="ui top right floated pointing dropdown icon button desktop-options">
+          <i class="options icon"></i>
+          <div class="menu">
+            <%- include("options-menu", {type: "desktop"}) %>
+          </div>
+        </div>
+        <h1>hacka-news</h1>
+    </div>
+    <div class="five ui pointing menu item">
+        <a href="hot" class="item <% if (active == "hot") { %> <%- "active"; %> <% } %>">Hot</a>
+        <a href="new" class="item <% if (active == "new") { %> <%- "active"; %> <% } %>">New</a>
+        <a href="ask" class="item <% if (active == "ask") { %> <%- "active"; %> <% } %>">Ask</a>
+        <a href="show" class="item <% if (active == "show") { %> <%- "active"; %> <% } %>">Show</a>
+        <a href="jobs" class="item <% if (active == "jobs") { %> <%- "active"; %> <% } %>">Jobs</a>
+    </div>
+</div>
