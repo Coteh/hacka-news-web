@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
     <%- include("header") %>
-    <body>
-        <%- include("menu", {active: active}) %>
-        <div class="stories">
-            <div><h3><%= title %></h3></div>
-            <hr>
-            <%- include("list") %>
+    <body class="pushable">
+        <%- include("mobile-menu", {active: active}) %>
+        <div class="pusher back-layer">
+            <%- include("mobile-menu-access") %>
+            <%- include("desktop-menu", {active: active}) %>
+            <div class="stories">
+                <div><h3><%= title %></h3></div>
+                <hr>
+                <%- include("list") %>
+            </div>
         </div>
+        <%- include("scripts") %>
     </body>
 </html>

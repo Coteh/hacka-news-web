@@ -1,14 +1,16 @@
 function changeTheme(theme) {
     switch (theme) {
         case "regular":
-            $('.ui.segment.darkorange').addClass("orange").removeClass("darkorange inverted");
+            $('.ui.darkorange:not(.ui.label)').addClass("orange").removeClass("darkorange inverted");
             $('.ui.menu').removeClass("inverted");
-            $(document.body).css("background-color", "white").css("color", "black");
+            $(".back-layer")[0].style.setProperty("background", "white", "important");
+            $(".back-layer")[0].style.setProperty("color", "black");
             break;
         case "night":
-            $('.ui.segment.orange').addClass("darkorange inverted").removeClass("orange");
+            $('.ui.orange:not(.ui.label)').addClass("darkorange inverted").removeClass("orange");
             $('.ui.menu').addClass("inverted");
-            $(document.body).css("background-color", "black").css("color", "white");
+            $(".back-layer")[0].style.setProperty("background", "black", "important");
+            $(".back-layer")[0].style.setProperty("color", "white");
             break;
     }
     if ($.cookie("theme") === undefined) {
@@ -18,11 +20,17 @@ function changeTheme(theme) {
 
 $(document).ready(function() {
     $('.ui.dropdown').dropdown();
-    $('.ui.dropdown .menu .item#regular').on('click', function() {
+    $('.menu .item#regular').on('click', function() {
         changeTheme("regular");
     });
-    $('.ui.dropdown .menu .item#night').on('click', function() {
+    $('.menu .item#night').on('click', function() {
         changeTheme("night");
+    });
+    $('.menu.launch.icon.item').on('click', function(){
+        $('.ui.left.sidebar').sidebar('toggle');
+    });
+    $('.options.launch.icon.item').on('click', function(){
+        $('.ui.right.sidebar').sidebar('toggle');
     });
     var transitionTime = 0;
     $(document.body).fadeIn(transitionTime);

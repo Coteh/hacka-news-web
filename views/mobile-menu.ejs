@@ -1,0 +1,14 @@
+<div class="ui orange left sidebar inverted vertical menu mobile">
+    <div class="item">
+        <h4>hacka-news</h4>
+    </div>
+    <a href="hot" class="item <% if (active == "hot") { %> <%- "active"; %> <% } %>">Hot</a>
+    <a href="new" class="item <% if (active == "new") { %> <%- "active"; %> <% } %>">New</a>
+    <a href="ask" class="item <% if (active == "ask") { %> <%- "active"; %> <% } %>">Ask</a>
+    <a href="show" class="item <% if (active == "show") { %> <%- "active"; %> <% } %>">Show</a>
+    <a href="jobs" class="item <% if (active == "jobs") { %> <%- "active"; %> <% } %>">Jobs</a>
+</div>
+
+<div class="ui orange right sidebar inverted vertical menu mobile">
+    <%- include("options-menu") %>
+</div>

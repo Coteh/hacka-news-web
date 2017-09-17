@@ -1,7 +1,15 @@
-body {
-    display: none;
-}
-
 .stories {
     margin: 0em 1em;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .desktop-menu {
+        display: none !important;
+    }
 }
