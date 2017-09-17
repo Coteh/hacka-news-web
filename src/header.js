@@ -1,4 +1,7 @@
 function changeTheme(theme) {
+    if (theme === undefined) {
+        theme = "regular";
+    }
     switch (theme) {
         case "regular":
             $('.ui.darkorange:not(.ui.label)').addClass("orange").removeClass("darkorange inverted");
@@ -13,9 +16,7 @@ function changeTheme(theme) {
             $(".back-layer")[0].style.setProperty("color", "white");
             break;
     }
-    if ($.cookie("theme") === undefined) {
-        $.cookie("theme", theme, {expires: 3650});
-    }
+    $.cookie("theme", theme, {expires: 3650});
 }
 
 $(document).ready(function() {
