@@ -2,5 +2,6 @@
     <% var story = stories[i]; %>
     <a href="<%= (story.url === undefined) ? story.commentsUrl : story.url %>"><%= story.title %></a> <br/>
     <%= story.timeStr %> by <%= story.by %>, <%= story.score %> points, <a href="<%= story.commentsUrl %>">
-        <%= story.descendants %> comment<%= (story.descendants == 1) ? "" : "s" %></a> <br/><hr>
+        <%= story.descendants %> comment<%= (story.descendants == 1) ? "" : "s" %></a> <br/>
+    <div class="ui divider"></div>
 <% } %>
