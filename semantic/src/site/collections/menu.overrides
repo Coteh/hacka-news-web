@@ -2,6 +2,10 @@
          Site Overrides
 *******************************/
 
+.ui.menu .item {
+    position: static;
+}
+
 .orange {
     background-color: #F2711C !important;
     color: black;
