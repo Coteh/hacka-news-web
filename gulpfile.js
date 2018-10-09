@@ -2,20 +2,22 @@
     Set-up for Semantic UI
 *******************************/
 
+const SEMANTIC_TASKS_PATH = "./node_modules/semantic-ui/tasks";
+
 var
     gulp = require('gulp-help')(require('gulp')),
 
     // watch changes
-    watch = require('./semantic/tasks/watch'),
+    watch = require(SEMANTIC_TASKS_PATH + '/watch'),
 
     // build all files
-    build = require('./semantic/tasks/build'),
-    buildJS = require('./semantic/tasks/build/javascript'),
-    buildCSS = require('./semantic/tasks/build/css'),
-    buildAssets = require('./semantic/tasks/build/assets'),
+    build = require(SEMANTIC_TASKS_PATH + '/build'),
+    buildJS = require(SEMANTIC_TASKS_PATH + '/build/javascript'),
+    buildCSS = require(SEMANTIC_TASKS_PATH + '/build/css'),
+    buildAssets = require(SEMANTIC_TASKS_PATH + '/build/assets'),
 
     // utility
-    clean = require('./semantic/tasks/clean')
+    clean = require(SEMANTIC_TASKS_PATH + '/clean')
     ;
 
 
