@@ -11,11 +11,9 @@ A web interface for Hacker News that makes use of my [hacka-news](https://github
 
 ## Installation
 
-Navigate to semantic folder and run:
+Run gulp build to build Semantic UI components
 
 `gulp build`
-
-Navigate back up to project root and run the following:
 
 Download vendor scripts
 
