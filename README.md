@@ -11,25 +11,23 @@ A web interface for Hacker News that makes use of my [hacka-news](https://github
 
 ## Installation
 
-Run gulp build to build Semantic UI components
-
-`gulp build`
-
-Download vendor scripts
+### Download vendor scripts
 
 `npm run dl-vendors`
 
-Build with webpack
+### Run gulp script to build the web app
 
-`npm run build`
+For production:
+`gulp`
+(or `gulp prod`)
 
-Run the server
+For dev:
+`gulp dev`
+
+### Run the server
 
 `node app.js`
-
-or
-
-`npm start`
+(or `npm start`)
 
 ## Known Limitations
 

@@ -8,6 +8,9 @@ const TEMPLATES_ROOT = 'views';
 
 var
     gulp = require('gulp-help')(require('gulp')),
+    gulpWebpack = require('webpack-stream'),
+    webpack = require('webpack'),
+    webpackConfig = require('./webpack.config.js'),
     browserSync = require('browser-sync').create()
     ;
 
@@ -23,10 +26,10 @@ var
     watch = require(SEMANTIC_TASKS_PATH + '/watch'),
 
     // build all files
-    build = require(SEMANTIC_TASKS_PATH + '/build'),
-    buildJS = require(SEMANTIC_TASKS_PATH + '/build/javascript'),
-    buildCSS = require(SEMANTIC_TASKS_PATH + '/build/css'),
-    buildAssets = require(SEMANTIC_TASKS_PATH + '/build/assets'),
+    semanticBuild = require(SEMANTIC_TASKS_PATH + '/build'),
+    semanticBuildJS = require(SEMANTIC_TASKS_PATH + '/build/javascript'),
+    semanticBuildCSS = require(SEMANTIC_TASKS_PATH + '/build/css'),
+    semanticBuildAssets = require(SEMANTIC_TASKS_PATH + '/build/assets'),
 
     // utility
     clean = require(SEMANTIC_TASKS_PATH + '/clean')
@@ -38,26 +41,36 @@ var
 *******************************/
 
 gulp.task('default', false, [
-    'watch'
+    'prod'
 ]);
 
 gulp.task('browser-sync', function() {
     browserSync.init({
         files: [SITE_ROOT + '/**', TEMPLATES_ROOT + '/**'],
-        // server: {
-        //     baseDir: PROJECT_ROOT + '/'
-        // },
         proxy: 'localhost:3000'
     });
 });
 
+gulp.task('build', 'Build main site assets', function() {
+    return gulpWebpack(webpackConfig, webpack)
+        .pipe(gulp.dest(webpackConfig.output.path));
+});
+
 gulp.task('watch', 'Watch for site/theme changes', watch);
 
-gulp.task('build', 'Builds all files from source', build);
-gulp.task('build-javascript', 'Builds all javascript from source', buildJS);
-gulp.task('build-css', 'Builds all css from source', buildCSS);
-gulp.task('build-assets', 'Copies all assets from source', buildAssets);
+gulp.task('semantic-build', 'Builds all files from source', semanticBuild);
+gulp.task('semantic-build-javascript', 'Builds all javascript from source', semanticBuildJS);
+gulp.task('semantic-build-css', 'Builds all css from source', semanticBuildCSS);
+gulp.task('semantic-build-assets', 'Copies all assets from source', semanticBuildAssets);
 
-gulp.task('dev', 'Builds site and runs in dev mode', ['build', 'browser-sync']);
+gulp.task('dev', 'Builds site and runs in dev mode', ['build', 'semantic-build', 'browser-sync'], function() {
+    gulp.watch([
+        PROJECT_ROOT + '/src/*',
+        PROJECT_ROOT + '/*.css',
+        PROJECT_ROOT + '/lib/*'
+    ], ['build']);
+});
+
+gulp.task('prod', 'Builds site for production', ['build', 'semantic-build']);
 
 gulp.task('clean', 'Clean dist folder', clean);
