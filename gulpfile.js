@@ -65,8 +65,7 @@ gulp.task('semantic-build-assets', 'Copies all assets from source', semanticBuil
 
 gulp.task('dev', 'Builds site and runs in dev mode', ['build', 'semantic-build', 'browser-sync'], function() {
     gulp.watch([
-        PROJECT_ROOT + '/src/*',
-        PROJECT_ROOT + '/*.css',
+        PROJECT_ROOT + '/assets/*',
         PROJECT_ROOT + '/lib/*'
     ], ['build']);
 });

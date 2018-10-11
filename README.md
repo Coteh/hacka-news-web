@@ -23,6 +23,7 @@ For production:
 
 For dev:
 `gulp dev`
+- Run the server before running `gulp dev` so that browsersync can connect to the server via proxy
 
 ### Run the server
 

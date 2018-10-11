@@ -3,7 +3,7 @@ var CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: {
-        'js/header.bundle': ['./src/header.js'],
+        'js/header.bundle': ['./assets/js/header.js'],
     },
     output: {
         filename: '[name].js',
@@ -16,7 +16,7 @@ module.exports = {
                 to: 'lib'
             },
             {
-                from: 'style.css',
+                from: 'assets/css/style.css',
                 to: 'css/style.css'
             }
         ])
