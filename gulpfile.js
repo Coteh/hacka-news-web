@@ -65,9 +65,18 @@ gulp.task('semantic-build-assets', 'Copies all assets from source', semanticBuil
 
 gulp.task('dev', 'Builds site and runs in dev mode', ['build', 'semantic-build', 'browser-sync'], function() {
     gulp.watch([
-        PROJECT_ROOT + '/assets/*',
-        PROJECT_ROOT + '/lib/*'
+        PROJECT_ROOT + '/assets/**/*.*',
+        PROJECT_ROOT + '/lib/*.*'
     ], ['build']);
+    gulp.watch([
+        PROJECT_ROOT + '/semantic/src/themes/**/assets/**/*.*'
+    ], ['semantic-build-assets']);
+    gulp.watch([
+        PROJECT_ROOT + '/semantic/src/definitions/**/*.less'
+    ], ['semantic-build-css']);
+    gulp.watch([
+        PROJECT_ROOT + '/semantic/src/definitions/**/*.js'
+    ], ['semantic-build-javascript']);
 });
 
 gulp.task('prod', 'Builds site for production', ['build', 'semantic-build']);
