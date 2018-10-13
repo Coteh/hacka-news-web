@@ -11,21 +11,33 @@ A web interface for Hacker News that makes use of my [hacka-news](https://github
 
 ## Installation
 
+### Run npm installation
+
+`npm install`
+
 ### Download vendor scripts
 
 `npm run dl-vendors`
 
+## Running in Development
+
+### Run the server
+
+`node app.js`
+(or `npm start`)
+
+### Run gulp script to build and deploy assets in development
+
+`gulp dev`
+
+## Running in Production
+
 ### Run gulp script to build the web app
 
-For production:
 `gulp`
 (or `gulp prod`)
 
-For dev:
-`gulp dev`
-- Run the server before running `gulp dev` so that browsersync can connect to the server via proxy
-
-### Run the server
+### Run the server directly
 
 `node app.js`
 (or `npm start`)
