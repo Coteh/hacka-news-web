@@ -5,6 +5,7 @@
 const PROJECT_ROOT = '.';
 const SITE_ROOT = 'public';
 const TEMPLATES_ROOT = 'views';
+const SEMANTIC_ROOT = 'semantic';
 
 var
     gulp = require('gulp-help')(require('gulp')),
@@ -46,7 +47,7 @@ gulp.task('default', false, [
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        files: [SITE_ROOT + '/**', TEMPLATES_ROOT + '/**'],
+        files: [SITE_ROOT + '/**', TEMPLATES_ROOT + '/**', SEMANTIC_ROOT + '/dist/**'],
         proxy: 'localhost:3000'
     });
 });
@@ -69,13 +70,13 @@ gulp.task('dev', 'Builds site and runs in dev mode', ['build', 'semantic-build',
         PROJECT_ROOT + '/lib/*.*'
     ], ['build']);
     gulp.watch([
-        PROJECT_ROOT + '/semantic/src/themes/**/assets/**/*.*'
+        SEMANTIC_ROOT + '/src/themes/**/assets/**/*.*'
     ], ['semantic-build-assets']);
     gulp.watch([
-        PROJECT_ROOT + '/semantic/src/definitions/**/*.less'
+        SEMANTIC_ROOT + '/src/definitions/**/*.less'
     ], ['semantic-build-css']);
     gulp.watch([
-        PROJECT_ROOT + '/semantic/src/definitions/**/*.js'
+        SEMANTIC_ROOT + '/src/definitions/**/*.js'
     ], ['semantic-build-javascript']);
 });
 
