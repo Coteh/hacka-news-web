@@ -66,6 +66,11 @@ typings/
 # Semantic UI
 semantic/dist/
 semantic/tasks/
+semantic/gulpfile.js
+semantic/src/themes/
+semantic/src/definitions/
+semantic/src/semantic.less
+semantic/src/theme.less
 
 # Build Directory
 public/

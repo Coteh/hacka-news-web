@@ -2,7 +2,7 @@ FROM node:latest
 
 WORKDIR /usr/src/hacka-news-web
 
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json semantic.json ./
 
 RUN npm install
 

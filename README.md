@@ -11,27 +11,44 @@ A web interface for Hacker News that makes use of my [hacka-news](https://github
 
 ## Installation
 
-Navigate to semantic folder and run:
+### Run npm installation
 
-`gulp build`
+`npm install`
 
-Navigate back up to project root and run the following:
-
-Download vendor scripts
+### Download vendor scripts
 
 `npm run dl-vendors`
 
-Build with webpack
+## Running in Development
 
-`npm run build`
-
-Run the server
+### Run the server
 
 `node app.js`
+(or `npm start`)
 
-or
+### Run gulp script to build and deploy assets in development
 
-`npm start`
+`gulp dev`
+
+## Running in Production
+
+### Run gulp script to build the web app
+
+`gulp`
+(or `gulp prod`)
+
+### Run the server directly
+
+`node app.js`
+(or `npm start`)
+
+### Run the server off a Docker container
+
+#### Build Docker image
+`docker build -t hn-web .`
+
+#### Run container in detached mode
+`docker run -d -p "8080:3000" hn-web`
 
 ## Known Limitations
 
