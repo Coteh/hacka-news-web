@@ -42,6 +42,14 @@ A web interface for Hacker News that makes use of my [hacka-news](https://github
 `node app.js`
 (or `npm start`)
 
+### Run the server off a Docker container
+
+#### Build Docker image
+`docker build -t hn-web .`
+
+#### Run container in detached mode
+`docker run -d -p "8080:3000" hn-web`
+
 ## Known Limitations
 
 - Does not implement all features that the [official Hacker News API](https://github.com/HackerNews/API) and hacka-news provide
