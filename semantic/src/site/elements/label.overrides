@@ -1,3 +1,15 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.label.orange {
+    background-color: #F2711C !important;
+}
+
+.ui.label.darkorange {
+    background-color: @darkorange !important;
+}
+
+.ui.label.hacktoberfest {
+    background-color: @hacktoberfest2018 !important;
+}

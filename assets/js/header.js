@@ -7,7 +7,7 @@ function getThemeColor(theme) {
         case "midnight":
             return "black";
         case "hacktoberfest":
-            return "blue";
+            return "hacktoberfest";
     }
 }
 
