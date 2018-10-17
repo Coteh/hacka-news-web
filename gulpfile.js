@@ -73,7 +73,8 @@ gulp.task('dev', 'Builds site and runs in dev mode', ['build', 'semantic-build',
         SEMANTIC_ROOT + '/src/themes/**/assets/**/*.*'
     ], ['semantic-build-assets']);
     gulp.watch([
-        SEMANTIC_ROOT + '/src/definitions/**/*.less'
+        SEMANTIC_ROOT + '/src/definitions/**/*.less',
+        SEMANTIC_ROOT + '/src/site/**/*.*'
     ], ['semantic-build-css']);
     gulp.watch([
         SEMANTIC_ROOT + '/src/definitions/**/*.js'

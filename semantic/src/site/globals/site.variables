@@ -1,3 +1,7 @@
 /*******************************
      User Global Variables
 *******************************/
+
+@orange: #f60;
+@darkorange: #612700;
+@hacktoberfest2018: #2b81d9;

@@ -6,8 +6,18 @@
     position: static;
 }
 
-.orange {
+.ui.menu.orange {
     background-color: #F2711C !important;
+    color: black;
+}
+
+.ui.menu.darkorange {
+    background-color: @darkorange !important;
+    color: black;
+}
+
+.ui.menu.hacktoberfest {
+    background-color: @hacktoberfest2018 !important;
     color: black;
 }
 
