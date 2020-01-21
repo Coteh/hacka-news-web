@@ -20,7 +20,7 @@
     "semantic-ui": "^2.2.11"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^4.0.1",
+    "copy-webpack-plugin": "^4.6.0",
     "webpack": "^3.3.0"
   },
   "engines": {
