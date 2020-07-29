@@ -2,11 +2,9 @@ FROM node:latest
 
 WORKDIR /usr/src/hacka-news-web
 
-COPY package.json package-lock.json semantic.json ./
-
-RUN npm install
-
 COPY . .
 
+RUN yarn install
+
 EXPOSE 3000
-CMD ["npm","start"]
+CMD ["yarn","start"]

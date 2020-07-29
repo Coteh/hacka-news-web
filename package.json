@@ -4,11 +4,11 @@
   "description": "hacka-news for the web",
   "main": "app.js",
   "scripts": {
-    "postinstall": "gulp build && npm run dl-vendors && npm run build",
+    "postinstall": "gulp build && yarn dl-vendors && yarn build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "build": "webpack",
-    "dl-vendors": "sh ./download-vendors.sh"
+    "dl-vendors": "./download-vendors.sh"
   },
   "author": "James Cote",
   "license": "MIT",

@@ -7,24 +7,24 @@ A web interface for Hacker News that makes use of my [hacka-news](https://github
 ## Features
 
 - View top 10 headlines from five feed types (hot, new, ask, show, jobs)
-- Change theme (regular, night mode)
+- Change theme (regular, night, midnight, hacktoberfest)
 
 ## Installation
 
-### Run npm installation
+### Run installation
 
-`npm install`
+`yarn install`
 
 ### Download vendor scripts
 
-`npm run dl-vendors`
+`yarn dl-vendors`
 
 ## Running in Development
 
 ### Run the server
 
 `node app.js`
-(or `npm start`)
+(or `yarn start`)
 
 ### Run gulp script to build and deploy assets in development
 
@@ -40,7 +40,7 @@ A web interface for Hacker News that makes use of my [hacka-news](https://github
 ### Run the server directly
 
 `node app.js`
-(or `npm start`)
+(or `yarn start`)
 
 ### Run the server off a Docker container
 
