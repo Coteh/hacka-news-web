@@ -45,6 +45,8 @@ gulp.task('default', false, [
     'prod'
 ]);
 
+// Doesn't work atm
+// TODO(#35) Fix browser-sync config
 gulp.task('browser-sync', function() {
     browserSync.init({
         files: [SITE_ROOT + '/**', TEMPLATES_ROOT + '/**', SEMANTIC_ROOT + '/dist/**'],
