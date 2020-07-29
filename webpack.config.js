@@ -2,6 +2,7 @@ var path = require("path");
 var CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+    mode: 'production',
     entry: {
         'js/header.bundle': ['./assets/js/header.js'],
     },
@@ -10,15 +11,17 @@ module.exports = {
         path: path.resolve(__dirname, 'public')
     },
     plugins: [
-        new CopyWebpackPlugin([
-            {
-                from: 'lib',
-                to: 'lib'
-            },
-            {
-                from: 'assets/css/style.css',
-                to: 'css/style.css'
-            }
-        ])
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: 'lib',
+                    to: 'lib'
+                },
+                {
+                    from: 'assets/css/style.css',
+                    to: 'css/style.css'
+                }
+            ]
+        })
     ]
 };
