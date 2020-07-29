@@ -1,0 +1,18 @@
+.stories {
+    margin: 1em 8em 0em 8em;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .desktop-menu {
+        display: none !important;
+    }
+    .stories {
+        margin: 5em 1em 0em 1em;
+    }
+}
