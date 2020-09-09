@@ -20,7 +20,7 @@
     "express": "^4.15.3",
     "hacka-news": "^1.2.0",
     "semantic-ui": "^2.4.1",
-    "snyk": "^1.391.1"
+    "snyk": "^1.392.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.12",
