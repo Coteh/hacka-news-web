@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.12",
-    "copy-webpack-plugin": "^6.0.3",
+    "copy-webpack-plugin": "^6.4.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-stream": "^5.1.1"
