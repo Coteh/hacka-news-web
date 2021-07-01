@@ -23,7 +23,7 @@
     "snyk": "^1.395.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.27.4",
     "copy-webpack-plugin": "^6.0.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
