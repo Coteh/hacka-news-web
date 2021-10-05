@@ -26,6 +26,7 @@ function changeTheme(theme) {
         theme = "regular";
     }
     $(".ui.themeable:not(.ui.label)").addClass(getThemeColor(theme));
+    $(`.theme-item`).removeClass("selected");
     switch (theme) {
         case "regular":
             $(".ui.themeable:not(.ui.label), .ui.sub-themeable:not(.ui.label)").removeClass("inverted");
@@ -48,6 +49,7 @@ function changeTheme(theme) {
             $(".back-layer")[0].style.setProperty("color", "white");
             break;
     }
+    $(`#${theme}.theme-item`).addClass("selected");
     $.cookie("theme", theme, {expires: 3650});
 }
 
