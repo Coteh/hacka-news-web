@@ -53,7 +53,22 @@ function changeTheme(theme) {
     $.cookie("theme", theme, {expires: 3650});
 }
 
-$(document).ready(function() {
+// Adapted from https://stackoverflow.com/a/44670818
+function respondToVisibility(elem, callback) {
+    let options = {
+        root: document.documentElement,
+    };
+
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) callback()
+        });
+    }, options);
+
+    observer.observe(elem);
+}
+
+$(function() {
     $(".ui.dropdown").dropdown();
     $(".menu .item#regular").on("click", function() {
         resetTheme();
@@ -80,4 +95,8 @@ $(document).ready(function() {
     var transitionTime = 0;
     $(document.body).fadeIn(transitionTime);
     changeTheme($.cookie("theme"));
+    respondToVisibility(document.querySelector(".desktop-menu"), () => {
+        $(".ui.left.sidebar").sidebar("hide");
+        $(".ui.right.sidebar").sidebar("hide");
+    })
 });
