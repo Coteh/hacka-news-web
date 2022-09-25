@@ -1,6 +1,6 @@
 # hacka-news-web
 
-**[Click here to view the live site](https://hacka-news.herokuapp.com/)**
+**[Click here to view the live site](https://hacka-news.fly.dev/)**
 
 ![Screenshot](screenshot.png "App Screenshot")
 
