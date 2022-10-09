@@ -4,18 +4,19 @@
   "description": "hacka-news for the web",
   "main": "app.js",
   "scripts": {
-    "postinstall": "gulp build && yarn dl-vendors && yarn build",
+    "postinstall": "yarn dl-vendors && gulp build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "build": "webpack",
     "watch": "webpack -w",
     "dl-vendors": "./download-vendors.sh",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk-protect",
     "prepare": "yarn run snyk-protect"
   },
   "author": "James Cote",
   "license": "MIT",
   "dependencies": {
+    "@snyk/protect": "^1.1025.0",
     "ejs": "^3.1.8",
     "ejs-lint": "^0.3.0",
     "express": "^4.18.1",
@@ -26,15 +27,17 @@
   "devDependencies": {
     "browser-sync": "^2.27.10",
     "copy-webpack-plugin": "^6.0.3",
+    "gulp": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-stream": "^5.1.1"
   },
   "engines": {
-    "node": "^14.2.0"
+    "node": "^16.13.0"
   },
   "resolutions": {
-    "graceful-fs": "4.2.4"
+    "graceful-fs": "4.2.4",
+    "del": "6.1.1"
   },
   "snyk": true
 }

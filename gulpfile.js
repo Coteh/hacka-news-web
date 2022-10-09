@@ -8,7 +8,7 @@ const TEMPLATES_ROOT = 'views';
 const SEMANTIC_ROOT = 'semantic';
 
 var
-    gulp = require('gulp-help')(require('gulp')),
+    gulp = require('gulp'),
     gulpWebpack = require('webpack-stream'),
     webpack = require('webpack'),
     webpackConfig = require('./webpack.config.js'),
@@ -54,19 +54,28 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('build', 'Build main site assets', function() {
+function build() {
     return gulpWebpack(webpackConfig, webpack)
         .pipe(gulp.dest(webpackConfig.output.path));
-});
+}
 
-gulp.task('watch', 'Watch for site/theme changes', watch);
+// Build main site assets
+gulp.task('build', build);
 
-gulp.task('semantic-build', 'Builds all files from source', semanticBuild);
-gulp.task('semantic-build-javascript', 'Builds all javascript from source', semanticBuildJS);
-gulp.task('semantic-build-css', 'Builds all css from source', semanticBuildCSS);
-gulp.task('semantic-build-assets', 'Copies all assets from source', semanticBuildAssets);
+// Watch for site/theme changes
+gulp.task('watch', watch);
 
-gulp.task('dev', 'Builds site and runs in dev mode', ['build', 'semantic-build', 'browser-sync'], function() {
+// Builds all files from source
+gulp.task('semantic-build', semanticBuild);
+// Builds all javascript from source
+gulp.task('semantic-build-javascript', semanticBuildJS);
+// Builds all css from source
+gulp.task('semantic-build-css', semanticBuildCSS);
+// Copies all assets from source
+gulp.task('semantic-build-assets', semanticBuildAssets);
+
+// Builds site and runs in dev mode
+gulp.task('dev', gulp.series('build', 'semantic-build', 'browser-sync'), function() {
     gulp.watch([
         PROJECT_ROOT + '/assets/**/*.*',
         PROJECT_ROOT + '/lib/*.*'
@@ -83,6 +92,8 @@ gulp.task('dev', 'Builds site and runs in dev mode', ['build', 'semantic-build',
     ], ['semantic-build-javascript']);
 });
 
-gulp.task('prod', 'Builds site for production', ['build', 'semantic-build']);
+// Builds site for production
+gulp.task('prod', gulp.series('build', 'semantic-build'));
 
-gulp.task('clean', 'Clean dist folder', clean);
+// Clean dist folder
+gulp.task('clean', clean);
