@@ -4,11 +4,14 @@
   "description": "hacka-news for the web",
   "main": "app.js",
   "scripts": {
-    "postinstall": "yarn dl-vendors && gulp build",
+    "postinstall": "yarn dl-vendors && npm run install-semantic && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "build": "webpack",
-    "watch": "webpack -w",
+    "install-semantic": "cd node_modules/fomantic-ui && gulp install",
+    "build": "npm run build-semantic && npm run build-web",
+    "build-semantic": "cd semantic && gulp build",
+    "build-web": "webpack",
+    "watch-web": "webpack -w",
     "dl-vendors": "./download-vendors.sh",
     "snyk-protect": "snyk-protect",
     "prepare": "yarn run snyk-protect"
@@ -20,8 +23,8 @@
     "ejs": "^3.1.8",
     "ejs-lint": "^0.3.0",
     "express": "^4.18.2",
+    "fomantic-ui": "^2.9.0",
     "hacka-news": "^1.2.0",
-    "semantic-ui": "^2.5.0",
     "snyk": "^1.1032.0"
   },
   "devDependencies": {
@@ -34,10 +37,6 @@
   },
   "engines": {
     "node": "^16.13.0"
-  },
-  "resolutions": {
-    "graceful-fs": "4.2.4",
-    "del": "6.1.1"
   },
   "snyk": true
 }

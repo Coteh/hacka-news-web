@@ -32,25 +32,33 @@ function changeTheme(theme) {
             $(".ui.themeable:not(.ui.label), .ui.sub-themeable:not(.ui.label)").removeClass("inverted");
             $(".back-layer")[0].style.setProperty("background", "white", "important");
             $(".back-layer")[0].style.setProperty("color", "black");
+            changeStatusBarColor("#f60");
             break;
         case "night":
             $(".ui.themeable:not(.ui.label), .ui.sub-themeable:not(.ui.label)").addClass("inverted");
             $(".back-layer")[0].style.setProperty("background", "black", "important");
             $(".back-layer")[0].style.setProperty("color", "white");
+            changeStatusBarColor("#612700");
             break;
         case "midnight":
             $(".ui.themeable:not(.ui.label), .ui.sub-themeable:not(.ui.label)").addClass("inverted");
             $(".back-layer")[0].style.setProperty("background", "black", "important");
             $(".back-layer")[0].style.setProperty("color", "white");
+            changeStatusBarColor("#1B1C1D");
             break;
         case "hacktoberfest":
             $(".ui.themeable:not(.ui.label), .ui.sub-themeable:not(.ui.label)").addClass("inverted");
             $(".back-layer")[0].style.setProperty("background", "#2f1823", "important");
             $(".back-layer")[0].style.setProperty("color", "white");
+            changeStatusBarColor("#2b81d9");
             break;
     }
     $(`#${theme}.theme-item`).addClass("selected");
     $.cookie("theme", theme, {expires: 3650});
+}
+
+function changeStatusBarColor(color) {
+    document.querySelector("meta[name='theme-color']").content = color;
 }
 
 // Adapted from https://stackoverflow.com/a/44670818

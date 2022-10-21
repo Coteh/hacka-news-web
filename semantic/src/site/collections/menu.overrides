@@ -7,7 +7,7 @@
 }
 
 .ui.menu.orange {
-    background-color: #F2711C !important;
+    background-color: @orange !important;
     color: black;
 }
 
@@ -31,7 +31,7 @@
 
 .ui.menu .orange.active.item,
 .ui.orange.menu .active.item {
-  border-color: #F2711C !important;
+  border-color: @orange !important;
   color: #FFFFFF !important;
 }
 
