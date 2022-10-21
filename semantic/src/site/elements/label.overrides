@@ -3,7 +3,7 @@
 *******************************/
 
 .ui.label.orange {
-    background-color: #F2711C !important;
+    background-color: @orange !important;
 }
 
 .ui.label.darkorange {
