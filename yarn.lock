@@ -223,10 +223,10 @@
   dependencies:
     "@octokit/openapi-types" "^14.0.0"
 
-"@snyk/protect@^1.1041.0":
-  version "1.1041.0"
-  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1041.0.tgz#dc88c5712d037c495dc2b6b558baf37ba1bb3220"
-  integrity sha512-i6V3S1jO9B00Wb2EOoVhvi0XvRXF3BGaceeglTeRfGVtiKSklhUZjweKFtoI8Y5iSNL6lWHXfUscS8Qn7kdg1A==
+"@snyk/protect@^1.1045.0":
+  version "1.1045.0"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1045.0.tgz#2c94e36db2e6142114c46fedc371ca9e661e68d9"
+  integrity sha512-w70rUdCE8r2FqjcbAHQ1n20VlBJZopLggFTagEMrKUZBsmH64kV9KbaJtE4J+z72+m3u0oiS0pJmBu63M1wPsw==
 
 "@socket.io/base64-arraybuffer@~1.0.2":
   version "1.0.2"
