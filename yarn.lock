@@ -2699,10 +2699,10 @@ follow-redirects@^1.0.0, follow-redirects@^1.14.0:
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.9.tgz"
   integrity sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
 
-fomantic-ui@^2.9.1:
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/fomantic-ui/-/fomantic-ui-2.9.1.tgz#8b369fbff45c64d7a22ec5339989d71aeaedce77"
-  integrity sha512-o0nFWkc0nHJFJ4CP+D6vRTjLXcaD43NXAvdY7pZSrT15BnNZzEGhaaJxKJNAyeNMrIosXEsq2Dun040F35XB5A==
+fomantic-ui@^2.9.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/fomantic-ui/-/fomantic-ui-2.9.2.tgz#a1b353127dce9f75c80b411d08b00e896d523021"
+  integrity sha512-esZGafdBPpVDlZNDY294rJpWh2XH1rybo0lJOaUV0aU09LA52fi38dRw8Y22UIpqBDg1ZPQiYieErn6eVzE5ew==
   dependencies:
     "@actions/core" "^1.6.0"
     "@octokit/core" "^3.6.0"
