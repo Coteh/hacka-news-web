@@ -28,7 +28,7 @@
     "snyk": "^1.1155.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.29.1",
+    "browser-sync": "^2.29.3",
     "copy-webpack-plugin": "^6.0.3",
     "gulp": "^4.0.2",
     "webpack": "^4.44.1",
