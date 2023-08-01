@@ -209,10 +209,10 @@
     "@sentry/types" "7.40.0"
     tslib "^1.9.3"
 
-"@snyk/protect@^1.1187.0":
-  version "1.1187.0"
-  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1187.0.tgz#b8b7311279d772453257454c57388049d131ba39"
-  integrity sha512-tnl+TJpsYda0LZ6z74FSYTfNSjFIe3k06yzb5dXCocaZVYrF9H+Zuk82uCb2q88AYUUTsVduDCIdEgoxGIOMCA==
+"@snyk/protect@^1.1198.0":
+  version "1.1198.0"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1198.0.tgz#598c1febd48ffa739a64967a30c1ac327e705618"
+  integrity sha512-SO03i6Y+1gtkfZ64ng+gI4OX5Q56U4GIbjnkcfp5HXj+tId1bptTv/wbVr829qtFg4hkdUjKimptsmddhkIQzw==
 
 "@socket.io/base64-arraybuffer@~1.0.2":
   version "1.0.2"
